@@ -1,0 +1,35 @@
+{
+  "name": "andela_tdd",
+  "version": "1.0.0",
+  "description": "Test Driven Development",
+  "main": "index.js",
+  "scripts": {
+    "coverage": "nyc npm test",
+    "report": "nyc report --reporter=html",
+    "test-coverage-report": "npm run coverage && npm run report",
+    "test": "mocha --exit --require @babel/register test"
+  },
+  "keywords": [
+    "test",
+    "npm",
+    "mocha",
+    "chai",
+    "api"
+  ],
+  "author": "Bakare Emmanuel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nyc": "^14.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4"
+  }
+}
