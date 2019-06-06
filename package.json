@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "coverage": "nyc npm test",
-    "report": "nyc report --reporter=html",
-    "test-coverage-report": "npm run coverage && npm run report",
-    "test": "mocha --exit --require @babel/register test"
+    "report": "nyc report --reporter=lcov",
+    "test-coverage-report": "npm run coverage && npm run report && npm run coveralls",
+    "test": "mocha --exit --require @babel/register test",
+    "coveralls": "coveralls < coverage/lcov.info"
   },
   "keywords": [
     "test",
@@ -30,6 +31,7 @@
     "@babel/register": "^7.4.4",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "coveralls": "^3.0.3",
     "mocha": "^6.1.4"
   }
 }

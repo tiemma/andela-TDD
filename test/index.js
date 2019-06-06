@@ -26,7 +26,7 @@ describe('Names', () => {
             expect(err).to.be.null;
             expect(res.body).to.have.property('data')
             expect(res.body.data).to.have.property('name')
-            expect(res.body.data.name).to.equal('hell')
+            expect(res.body.data.name).to.equal('hello')
             expect(res).to.have.status(200);
         })
     })
